@@ -7,7 +7,7 @@ export function todoReducer(state = estadoInicial, action: fromTodo.Acciones): T
     switch (action.type) {
         case fromTodo.AGREGAR_TODO:
             const todo = new Todo(action.texto);
-            return [...state, todo];
+            return [...state, todo]; // https://desarrolloweb.com/articulos/operador-spread-es6.html
 
         default:
             return state;
