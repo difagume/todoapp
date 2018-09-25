@@ -46,6 +46,11 @@ export function todoReducer(state = estadoInicial, action: fromTodo.Acciones): T
                 }
             });
 
+
+        case fromTodo.BORRAR_TODO:
+            // va a regresar un arreglo con todos los elementos que el id sea distinto del id que se está enviando
+            return state.filter(todoEdit => todoEdit.id !== action.id);
+
         default:
             return state;
     }

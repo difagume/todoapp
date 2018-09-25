@@ -3,6 +3,7 @@ import { Action } from '@ngrx/store';
 export const AGREGAR_TODO = '[TODO] Agregar todo';
 export const TOGGLE_TODO = '[TODO] Toggle todo'; // cambiar el estado del check (si es true a false y viceversa)
 export const EDITAR_TODO = '[TODO] Editar todo';
+export const BORRAR_TODO = '[TODO] Borrar todo';
 
 export class AgregarTodoAction implements Action {
     readonly type = AGREGAR_TODO;
@@ -22,4 +23,10 @@ export class EditarTodoAction implements Action {
     constructor(public id: number, public texto: string) { }
 }
 
-export type Acciones = AgregarTodoAction | ToggleTodoAction | EditarTodoAction;
+export class BorrarTodoAction implements Action {
+    readonly type = BORRAR_TODO;
+
+    constructor(public id: number) { }
+}
+
+export type Acciones = AgregarTodoAction | ToggleTodoAction | EditarTodoAction | BorrarTodoAction;
