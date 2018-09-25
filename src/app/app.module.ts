@@ -12,6 +12,7 @@ import { TodoItemComponent } from './todo/todo-item/todo-item.component';
 import { TodoComponent } from './todo/todo.component';
 import { todoReducer } from './todo/todo.reducer';
 import { TodosListComponent } from './todo/todos-list/todos-list.component';
+import { appReducers } from './app.reducers';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { TodosListComponent } from './todo/todos-list/todos-list.component';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    StoreModule.forRoot({ todos: todoReducer }),
+    StoreModule.forRoot(appReducers),
     StoreDevtoolsModule.instrument({
       maxAge: 25, // Retains last 25 states
       logOnly: environment.production, // Restrict extension to log-only mode
