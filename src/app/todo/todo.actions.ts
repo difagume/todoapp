@@ -1,10 +1,18 @@
 import { Action } from '@ngrx/store';
 
 export const AGREGAR_TODO = '[TODO] Agregar todo';
+export const TOGGLE_TODO = '[TODO] Toggle todo'; // cambiar el estado del check (si es true a false y viceversa)
 
 export class AgregarTodoAction implements Action {
     readonly type = AGREGAR_TODO;
+
     constructor(public texto: string) { }
 }
 
-export type Acciones = AgregarTodoAction;
+export class ToggleTodoAction implements Action {
+    readonly type = TOGGLE_TODO;
+
+    constructor(public id: number) { }
+}
+
+export type Acciones = AgregarTodoAction | ToggleTodoAction;
