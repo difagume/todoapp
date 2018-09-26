@@ -5,6 +5,7 @@ export const TOGGLE_TODO = '[TODO] Toggle todo'; // cambiar el estado del check 
 export const EDITAR_TODO = '[TODO] Editar todo';
 export const BORRAR_TODO = '[TODO] Borrar todo';
 export const TOGGLE_ALL_TODO = '[TODO] Toggle all todo';
+export const BORRAR_COMPLETADOS_TODO = '[TODO] Borrar completados todo';
 
 export class AgregarTodoAction implements Action {
     readonly type = AGREGAR_TODO;
@@ -36,4 +37,13 @@ export class ToggleAllTodoAction implements Action {
     constructor(public completado: boolean) { }
 }
 
-export type Acciones = AgregarTodoAction | ToggleTodoAction | EditarTodoAction | BorrarTodoAction | ToggleAllTodoAction;
+export class BorrarTodoCompletadosAction implements Action {
+    readonly type = BORRAR_COMPLETADOS_TODO;
+}
+
+export type Acciones = AgregarTodoAction |
+    ToggleTodoAction |
+    EditarTodoAction |
+    BorrarTodoAction |
+    ToggleAllTodoAction |
+    BorrarTodoCompletadosAction;
