@@ -10,7 +10,6 @@ import { TodoAddComponent } from './todo/todo-add/todo-add.component';
 import { TodoFooterComponent } from './todo/todo-footer/todo-footer.component';
 import { TodoItemComponent } from './todo/todo-item/todo-item.component';
 import { TodoComponent } from './todo/todo.component';
-import { todoReducer } from './todo/todo.reducer';
 import { TodosListComponent } from './todo/todos-list/todos-list.component';
 import { appReducers } from './app.reducers';
 import { FilterPipe } from './filter/filter.pipe';
